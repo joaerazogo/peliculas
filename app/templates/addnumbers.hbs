@@ -1,0 +1,26 @@
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          {{input type="number" id="minnumber" value=minNumber name =minNumber}}
+          <label for="Number1">Number 1</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          {{input type="number" id="maxnumber" value=maxNumber name=maxNumber}}
+          <label for="Number2">Number 2</label>
+        </div>
+      </div>
+      <a class="waves-effect waves-light btn" {{action 'addnumber'}}><i class="material-icons left">send</i>Send</a>
+      <div class="row">
+          {{#if model.message}}
+            The suma of two numbers is: {{model.sum}}
+          {{else}}
+            The numbers can not be operated
+          {{/if}}
+      </div>
+    </form>
+
+</div>
+{{outlet}}
